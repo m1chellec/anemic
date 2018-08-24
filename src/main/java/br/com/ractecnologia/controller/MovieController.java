@@ -2,8 +2,6 @@ package br.com.ractecnologia.controller;
 
 import java.util.List;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -41,7 +39,7 @@ public class MovieController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<Void> create(@Valid @RequestBody MovieDTO movieDTO){
+	public ResponseEntity<Void> create(@RequestBody MovieDTO movieDTO){
 		movieService.create(movieDTO);
 		return new ResponseEntity<>(HttpStatus.CREATED);
 	}

@@ -1,10 +1,5 @@
 package br.com.ractecnologia.dto;
 
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-
-import org.hibernate.validator.constraints.NotEmpty;
-
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import br.com.ractecnologia.entity.LicensingModel;
@@ -26,12 +21,10 @@ public class MovieDTO {
 	
 	private Long id;
 	
-	@NotNull
 	@JsonDeserialize(using = LicensingModelNameDeserialize.class)
 	private LicensingModel licensingModel;
 
-	@NotEmpty
-	@Size(min=3)
+
 	private String name;
 
 }
