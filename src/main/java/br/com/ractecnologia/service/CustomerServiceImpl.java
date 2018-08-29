@@ -63,6 +63,7 @@ public class CustomerServiceImpl implements CustomerService {
 		customer.setMoneySpent(BigDecimal.ZERO);
 		customer.setStatus(CustomerStatus.REGULAR);
 		customer.setStatusExpirationDate(null);
+		customer.setId(null);
 		customerRepository.save(customer);
 	}
 

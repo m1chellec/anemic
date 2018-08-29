@@ -4,18 +4,25 @@ import java.util.Arrays;
 
 public enum CustomerStatus {
 
-	REGULAR(1), ADVANCED(2);
+	REGULAR(1,"R"), ADVANCED(2,"A");
 
 	private final Integer value;
+	
+	private final String simbol;
 
-	private CustomerStatus(int value) {
+	private CustomerStatus(int value, String simbol) {
 		this.value = value;
+		this.simbol = simbol;
 	}
 
 	public Integer getValue() {
 		return value;
 	}
 	
+	public String getSimbol() {
+		return simbol;
+	}
+
 	public static CustomerStatus get(Integer value) {
 		return Arrays.asList(values()).stream().filter(c -> c.getValue() == value).findAny().orElse(null);
 	}

@@ -8,7 +8,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 /**
  * The persistent class for the movie database table.
  * 
@@ -18,12 +17,11 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class MovieDTO {
-	
+
 	private Long id;
-	
+
 	@JsonDeserialize(using = LicensingModelNameDeserialize.class)
 	private LicensingModel licensingModel;
-
 
 	private String name;
 
